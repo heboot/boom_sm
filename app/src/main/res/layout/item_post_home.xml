@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x17"
+        android:layout_marginRight="@dimen/x17"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/x4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rylt_post_home_item_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/iv_post_home_item_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y403"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_post_home_item_tag"
+                    android:layout_width="@dimen/x90"
+                    android:layout_height="@dimen/y40"
+                    android:background="@mipmap/post_tag"
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingTop="@dimen/y6"
+                    android:text="测评"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x20" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/x9">
+
+
+                <com.codingfeel.sm.views.CircleImageView
+                    android:id="@+id/iv_post_home_item_head"
+                    android:layout_width="@dimen/x84"
+                    android:layout_height="@dimen/y84" />
+
+
+                <TextView
+                    android:id="@+id/tv_post_home_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y84"
+                    android:layout_marginLeft="@dimen/x19"
+                    android:layout_toRightOf="@+id/iv_post_home_item_head"
+                    android:gravity="center|left|center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/home_post_item_text_color" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

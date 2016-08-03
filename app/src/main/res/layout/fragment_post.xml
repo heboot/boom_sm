@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_page_bg"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+
+    <com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView
+        android:id="@+id/rv_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView>
+
+    <LinearLayout
+        android:id="@+id/llyt_post_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:layout_marginBottom="@dimen/y10"
+            android:layout_marginLeft="@dimen/x17"
+            android:layout_marginRight="@dimen/x17"
+            android:layout_marginTop="@dimen/y21"
+            android:background="@color/search_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.codingfeel.sm.views.GoogleIconFontTextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="&#xE8B6;"
+                    android:textColor="@color/themeColor_red"
+                    android:textSize="@dimen/x60" />
+
+                <TextView
+                    android:id="@+id/et_post_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@null" />
+
+                <com.codingfeel.sm.views.GoogleIconFontTextView
+                    android:id="@+id/tv_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="&#xE145;"
+                    android:textColor="@color/themeColor_red"
+                    android:textSize="@dimen/x60" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</FrameLayout>

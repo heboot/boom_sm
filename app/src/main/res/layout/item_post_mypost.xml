@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y450"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x12"
+    android:paddingLeft="@dimen/x24"
+    android:paddingRight="@dimen/x24"
+    android:paddingTop="@dimen/x12">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/x4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_mypost_item_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y403"
+                android:scaleType="fitXY" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/x9">
+
+
+                <com.codingfeel.sm.views.CircleImageView
+                    android:id="@+id/iv_mypost_item_head"
+                    android:layout_width="@dimen/x84"
+                    android:layout_height="@dimen/y84" />
+
+
+                <TextView
+                    android:id="@+id/tv_mypost_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x19"
+                    android:layout_toRightOf="@+id/iv_mypost_item_head"
+                    android:gravity="center|left|center_vertical"
+                    android:text="adafsdg"
+                    android:textColor="@color/home_post_item_text_color" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlyt_mypost_verify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_mypost_verify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="审核中"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x46" />
+
+
+            <com.codingfeel.sm.views.GoogleIconFontTextView
+                android:id="@+id/tv_mypost_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/y21"
+                android:layout_toLeftOf="@+id/tv_mypost_modify"
+                android:text="&#xE92B;"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x52" />
+
+            <com.codingfeel.sm.views.GoogleIconFontTextView
+                android:id="@+id/tv_mypost_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/y21"
+                android:text="&#xE254;"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x52" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

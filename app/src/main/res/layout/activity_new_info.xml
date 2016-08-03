@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="@dimen/x32"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:shadowColor="@color/themeColor_red"
+        android:hint="@string/hint_info_link"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColor="@color/themeColor_red"
+        android:id="@+id/et_newinfo_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText  android:hint="@string/hint_info_title"
+        android:id="@+id/et_newinfo_info"
+        android:layout_marginTop="@dimen/y46"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/y111"
+        android:text="爆料心得"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="@string/hint_info_content"
+        android:id="@+id/et_newinfo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/themeColor_red"
+        android:id="@+id/tv_newinfo_num"
+        android:gravity="right"
+        android:textSize="@dimen/x25"
+        android:text="0/120"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

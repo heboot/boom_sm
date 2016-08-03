@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/themeColor_red</color>
+    <color name="colorPrimaryDark">@color/themeColor_red</color>
+    <color name="colorAccent">@color/themeColor_red</color>
+    <color name="themeColor_red">#C5181E</color>
+
+
+    <color name="search_bg">#FAFAFA</color>
+    <color name="search_icon_color">#767676</color>
+    <color name="white">#ffffff</color>
+
+    <!--首页底部菜单↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="home_bottom_menu_text_color">#ffffff</color>
+    <!--首页底部菜单↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--帖子↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="home_post_item_text_color">#4A4A4A</color>
+    <!--帖子↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--裁剪↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="crop_bottom_color">#EEEEEE</color>
+    <!--裁剪↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+
+
+
+    <!--详情页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="detail_bottom_layout_color">#EEEEEE</color>
+    <color name="detail_bottom_layout_text_color">#4A4A4A</color>
+    <color name="detail_nickname_text_color">#000000</color>
+    <color name="detail_line_color">#B6B6B6</color>
+    <color name="info_detail_summary_text_color">#D0021B</color>
+    <color name="info_detail_title_text_color">#000000</color>
+    <!--详情页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--评论↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="comment_item_name_text_color">#030303</color>
+    <color name="comment_item_content_text_color">#777777</color>
+    <color name="comment_item_line_color">#E6E6E6</color>
+    <color name="comment_bottom_layout_color">#EEEEEE</color>
+    <!--评论↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+
+    <!--首页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="home_item_title_text_color">#474E56</color>
+    <color name="home_item_price_text_color">#D0021B</color>
+    <color name="home_item_info_text_color">#9B9B9B</color>
+    <color name="home_item_good_text_color">#9B9B9B</color>
+    <color name="home_page_bg">#EEEEEE</color>
+    <!--首页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+    <!--我的↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="my_page_color">#EEEEEE</color>
+    <color name="my_page_name_text_color">#4A4A4A</color>
+    <color name="my_page_info_text_color">#9B9B9B</color>
+    <color name="my_page_item_text_color">#4A4A4A</color>
+    <color name="my_page_line_color">#CECECF</color>
+    <!--我的↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+    <!--设置页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <color name="copyright_text_color">#4A4A4A</color>
+    <color name="setting_item_text_color">#4A4A4A</color>
+    <color name="setting_item_cild_text_color">#9B9B9B</color>
+    <color name="setting_line_color">#DDDDDD</color>
+    <color name="setting_ripple_color">#9B9B9B</color>
+    <!--设置页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+</resources>

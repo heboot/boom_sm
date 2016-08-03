@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/feedback_page_padding">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/feedback_title_contact"
+        android:textColor="@color/themeColor_red" />
+
+
+    <EditText
+        android:id="@+id/et_feedback_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_item_margin_top"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_bg_feedback"
+        android:lines="1" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_item_margin_top"
+        android:text="@string/feedback_title_feedbackcontent"
+        android:textColor="@color/themeColor_red" />
+
+
+    <EditText
+        android:id="@+id/et_feedback_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_item_margin_top"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_bg_feedback" />
+
+    <Button
+        android:id="@+id/bt_feedback_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/feedback_item_margin_top"
+        android:background="@color/themeColor_red"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/feedback_submit_text_size" />
+
+</LinearLayout>

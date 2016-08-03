@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView
+        android:id="@+id/rv_myinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/view_empty"></com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_myinfo_add"
+        android:layout_width="@dimen/x117"
+        android:layout_height="@dimen/y117"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/y63"
+        android:layout_marginRight="@dimen/x63"
+        android:background="@color/themeColor_red"
+        android:src="@mipmap/add_white"
+        app:backgroundTint="@color/themeColor_red"
+        app:elevation="6dp"
+        app:rippleColor="#33728dff" />
+
+
+</RelativeLayout>

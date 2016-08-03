@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--custom:aspectRatioX="5"-->
+    <!--custom:showGuidelines="onTouch"-->
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/crop_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llyt_crop_bottom"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        custom:aspectRatioX="5" />
+
+    <LinearLayout
+        android:id="@+id/llyt_crop_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y110"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/themeColor_red"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_crop_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x35" />
+
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_crop_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x35" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

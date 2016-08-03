@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_page_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/themeColor_red"
+        android:gravity="center|left"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingLeft="@dimen/x46"
+        android:text="我的"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y167"
+                android:layout_marginLeft="@dimen/x17"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/my_layout_margin_top"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rlyt_my_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.codingfeel.sm.views.CircleImageView
+                        android:id="@+id/iv_my_head"
+                        android:layout_width="@dimen/x84"
+                        android:layout_height="@dimen/y84"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/x42" />
+
+                    <TextView
+                        android:id="@+id/tv_my_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y32"
+                        android:layout_toRightOf="@+id/iv_my_head"
+                        android:text="未登录"
+                        android:textColor="@color/my_page_name_text_color"
+                        android:textSize="@dimen/my_name_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_my_name"
+                        android:layout_marginTop="@dimen/y25"
+                        android:layout_toRightOf="@+id/iv_my_head"
+                        android:text="查看或编辑个人信息"
+                        android:textColor="@color/my_page_info_text_color" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_myinfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y299"
+                android:layout_marginLeft="@dimen/x17"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/my_layout_margin_top"
+                android:background="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:layout_marginTop="@dimen/y21"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/llyt_my_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/x50"
+                            android:layout_height="@dimen/y50"
+                            android:background="@mipmap/icon_my_boom"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:layout_marginTop="@dimen/y6"
+                            android:text="我的爆料"
+                            android:textColor="@color/my_page_item_text_color" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x2"
+                        android:layout_marginLeft="@dimen/x82"
+                        android:layout_marginTop="@dimen/y25"
+                        android:background="@color/my_page_line_color"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llyt_my_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y25"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/x50"
+                            android:layout_height="@dimen/y50"
+                            android:background="@mipmap/icon_my_post" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:layout_marginTop="@dimen/y9"
+                            android:text="我的帖子"
+                            android:textColor="@color/my_page_item_text_color" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x2"
+                        android:layout_marginLeft="@dimen/x82"
+                        android:layout_marginTop="@dimen/y25"
+                        android:background="@color/my_page_line_color"></View>
+
+                    <LinearLayout
+                        android:id="@+id/llyt_my_fav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y25"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/x50"
+                            android:layout_height="@dimen/y50"
+                            android:background="@mipmap/icon_my_fav" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:layout_marginTop="@dimen/y9"
+                            android:text="我的收藏"
+                            android:textColor="@color/my_page_item_text_color" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x2"
+                        android:layout_marginLeft="@dimen/x82"
+                        android:layout_marginTop="@dimen/y25"
+                        android:background="@color/my_page_line_color"></View>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_my_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y123"
+                android:layout_marginBottom="@dimen/y5"
+                android:layout_marginLeft="@dimen/x17"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/my_layout_margin_top"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x50"
+                        android:layout_height="@dimen/y50"
+                        android:background="@mipmap/icon_my_setting" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x32"
+                        android:text="我的设置"
+                        android:textColor="@color/my_page_item_text_color" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

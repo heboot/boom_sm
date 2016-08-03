@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y42"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x61"
+    android:paddingRight="@dimen/x50"
+    android:paddingTop="@dimen/y25">
+
+    <com.codingfeel.sm.views.CircleImageView
+        android:id="@+id/iv_comment_item_head"
+        android:layout_width="@dimen/x105"
+        android:layout_height="@dimen/y105"
+        android:background="@mipmap/normal_head" />
+
+    <TextView
+        android:id="@+id/tv_comment_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x36"
+        android:layout_toRightOf="@+id/iv_comment_item_head"
+        android:text="我累个擦"
+        android:textColor="@color/comment_item_name_text_color"
+        android:textSize="@dimen/comment_item_name_text_size" />
+
+    <TextView
+        android:id="@+id/tv_comment_item_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y3"
+        android:layout_toRightOf="@+id/tv_comment_item_name"
+        android:text="回复了"
+        android:textColor="@color/comment_item_content_text_color"
+        android:textSize="@dimen/comment_item_content_text_size" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_comment_item_renick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_toRightOf="@+id/tv_comment_item_re"
+        android:textColor="@color/comment_item_name_text_color"
+        android:textSize="@dimen/comment_item_name_text_size" />
+
+
+    <TextView
+        android:id="@+id/tv_comment_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/x36"
+        android:text="我累个擦"
+        android:textColor="@color/comment_item_content_text_color"
+        android:textSize="@dimen/comment_item_time_text_size" />
+
+    <TextView
+        android:id="@+id/tv_comment_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_comment_item_name"
+        android:layout_marginLeft="@dimen/x36"
+        android:layout_marginTop="@dimen/y25"
+        android:layout_toRightOf="@+id/iv_comment_item_head"
+        android:text="我累个擦"
+        android:textColor="@color/comment_item_content_text_color"
+        android:textSize="@dimen/comment_item_content_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:layout_below="@+id/iv_comment_item_head"
+        android:layout_marginLeft="@dimen/x36"
+        android:layout_marginTop="@dimen/y25"
+        android:layout_toRightOf="@+id/iv_comment_item_head"
+        android:background="@color/comment_item_line_color"></View>
+
+
+</RelativeLayout>

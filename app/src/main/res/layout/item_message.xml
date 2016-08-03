@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y5"
+        android:layout_marginLeft="@dimen/x9"
+        android:layout_marginRight="@dimen/x9"
+        android:layout_marginTop="@dimen/y5"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y22"
+            android:layout_marginTop="@dimen/y22"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x36"
+            android:paddingRight="@dimen/x50">
+
+            <com.codingfeel.sm.views.CircleImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_message_item_head"
+                android:layout_width="@dimen/x77"
+                android:layout_height="@dimen/y77" />
+
+            <TextView
+                android:id="@+id/tv_message_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x36"
+                android:layout_toRightOf="@+id/iv_message_item_head"
+                android:text="我累个擦"
+                android:textColor="@color/comment_item_name_text_color"
+                android:textSize="@dimen/comment_item_name_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_message_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/x36"
+                android:text="我累个擦"
+                android:textColor="@color/comment_item_content_text_color"
+                android:textSize="@dimen/comment_item_time_text_size" />
+
+            <TextView
+                android:id="@+id/tv_message_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message_item_name"
+                android:layout_marginLeft="@dimen/x36"
+                android:layout_marginTop="@dimen/y25"
+                android:layout_toRightOf="@+id/iv_message_item_head"
+                android:text="我累个擦"
+                android:textColor="@color/comment_item_content_text_color"
+                android:textSize="@dimen/comment_item_content_text_size" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

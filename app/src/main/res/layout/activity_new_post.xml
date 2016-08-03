@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlyt_newpost_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llyt_newpost_top"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/et_newinfo_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_newpost_img"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/y212"-->
+    <!--android:layout_margin="@dimen/x32"-->
+    <!--android:background="@mipmap/cover"-->
+    <!--android:scaleType="fitXY" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_newpost_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/x32" />-->
+
+    <!--<android.support.v7.widget.AppCompatSpinner-->
+    <!--android:id="@+id/spinner_newpost_tags"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/x32"></android.support.v7.widget.AppCompatSpinner>-->
+
+
+    <!--</LinearLayout>-->
+
+    <com.codingfeel.sm.views.richeditor.RichTextEditor
+        android:id="@+id/et_newpost_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llyt_newpost_bottom" />
+
+
+    <LinearLayout
+        android:id="@+id/llyt_newpost_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y105"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.codingfeel.sm.views.GoogleIconFontTextView
+            android:id="@+id/iv_newpost_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x50"
+            android:layout_marginLeft="@dimen/x31"
+            android:text="&#xE3B0;"/>
+
+        <ImageView
+            android:id="@+id/iv_newpost_emoji"
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/y48"
+            android:layout_marginLeft="@dimen/x42"
+            android:background="@mipmap/emoji_gray"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</RelativeLayout>

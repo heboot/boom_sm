@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_marginTop="@dimen/y21"
+            android:layout_marginBottom="@dimen/y17"
+            android:background="@color/search_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.codingfeel.sm.views.GoogleIconFontTextView
+                    android:id="@+id/tv_searchresult_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="&#xE5C4;"
+                    android:textColor="@color/themeColor_red"
+                    android:textSize="@dimen/x60" />
+
+                <EditText
+                    android:lines="1"
+                    android:id="@+id/et_searchresult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@null"
+                    android:hint="搜索" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView
+        android:id="@+id/rv_searchresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/view_empty"></com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaterialRippleLayout">
+        <attr name="rippleColorMy" format="color" localization="suggested" />
+        <attr name="rippleDimension" format="dimension" localization="suggested" />
+        <attr name="rippleOverlay" format="boolean" localization="suggested" />
+        <attr name="rippleAdapterClicked" format="boolean" localization="suggested" />
+        <attr name="rippleAlpha" format="float" localization="suggested" />
+        <attr name="rippleDuration" format="integer" localization="suggested" />
+        <attr name="rippleFadeDuration" format="integer" localization="suggested" />
+        <attr name="rippleHover" format="boolean" localization="suggested" />
+        <attr name="rippleBackground" format="color" localization="suggested" />
+        <attr name="rippleDelayClick" format="boolean" localization="suggested" />
+        <attr name="ripplePersistent" format="boolean" localization="suggested" />
+        <attr name="rippleInAdapter" format="boolean" localization="suggested" />
+        <attr name="rippleRoundedCorners" format="dimension" localization="suggested" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_coner" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="superrecyclerview">
+        <attr name="layout_empty" format="reference"/>
+        <attr name="layout_moreProgress" format="reference"/>
+        <attr name="layout_progress" format="reference"/>
+        <attr name="recyclerClipToPadding" format="boolean"/>
+        <attr name="recyclerPadding" format="dimension"/>
+        <attr name="recyclerPaddingTop" format="dimension"/>
+        <attr name="recyclerPaddingBottom" format="dimension"/>
+        <attr name="recyclerPaddingLeft" format="dimension"/>
+        <attr name="recyclerPaddingRight" format="dimension"/>
+        <attr name="scrollbarStyle">
+            <flag name="insideOverlay" value="0x0"/>
+            <flag name="insideInset" value="0x01000000"/>
+            <flag name="outsideOverlay" value="0x02000000"/>
+            <flag name="outsideInset" value="0x03000000"/>
+        </attr>
+
+        <attr name="mainLayoutId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="horizontalSwipeOffset" format="dimension"/>
+        <attr name="verticalSwipeOffset" format="dimension"/>
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0"/>
+            <enum name="pull_out" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

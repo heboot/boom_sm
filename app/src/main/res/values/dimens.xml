@@ -1,0 +1,61 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!--首页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="home_item_title_text_size">@dimen/x29</dimen>
+    <dimen name="home_item_price_text_size">@dimen/x25</dimen>
+    <dimen name="home_item_info_text_size">@dimen/x25</dimen>
+    <dimen name="home_item_good_text_size">@dimen/x25</dimen>
+    <!--首馈↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--详情页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="detail_bottom_text_size">@dimen/x29</dimen>
+    <dimen name="detail_bottom_text_margin_left">@dimen/x5</dimen>
+    <dimen name="detail_bottom_link_text_size">@dimen/x33</dimen>
+    <dimen name="detail_nickname_text_size">@dimen/x29</dimen>
+    <!--详情页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+    <!--首页底部菜单↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="home_bottom_menu_text_size">@dimen/x22</dimen>
+    <!--首页底部菜单↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--评论↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="comment_item_name_text_size">@dimen/x27</dimen>
+    <dimen name="comment_item_content_text_size">@dimen/x25</dimen>
+    <dimen name="comment_item_time_text_size">@dimen/x23</dimen>
+    <!--评论↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+    <!--我的↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="my_layout_margin_top">@dimen/x19</dimen>
+    <dimen name="my_name_text_size">@dimen/x34</dimen>
+    <!--我的↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <dimen name="edit_padding_top">0dp</dimen>
+
+
+    <!--设置页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="setting_title_text_size">14sp</dimen>
+    <dimen name="setting_item_text_size">16sp</dimen>
+    <dimen name="setting_item_child_text_size">14sp</dimen>
+    <dimen name="setting_line_height">@dimen/y1</dimen>
+    <dimen name="setting_item_margin_top">@dimen/y35</dimen>
+    <dimen name="setting_item_padding">@dimen/y29</dimen>
+    <dimen name="setting_page_padding">@dimen/x42</dimen>
+    <dimen name="copy_right_text_size">14sp</dimen>
+    <!--设置页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <!--反馈页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <dimen name="feedback_page_padding">@dimen/x42</dimen>
+    <dimen name="feedback_title_text_size">14sp</dimen>
+    <dimen name="feedback_content_text_size">14sp</dimen>
+    <dimen name="feedback_item_margin_top">@dimen/y35</dimen>
+    <dimen name="feedback_submit_text_size">@dimen/y35</dimen>
+    <!--反馈↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+    <dimen name="swipe_progress_bar_height">8dp</dimen>
+</resources>

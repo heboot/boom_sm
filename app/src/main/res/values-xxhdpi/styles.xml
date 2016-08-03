@@ -1,0 +1,48 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Base.Theme.AppCompat">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+        <!--<item name="colorPrimary">@color/COLOR_FFA849</item>-->
+        <!--<item name="colorPrimaryDark">@android:color/black</item>-->
+        <!--<item name="colorAccent">@color/c3</item>-->
+        <!--<item name="actionBarSize">48dp</item>-->
+        <!--<item name="android:windowAnimationStyle">@style/AnimationActivity</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--<item name="android:alertDialogTheme">@style/MyDialog</item>-->
+        <!--<item name="android:dialogTheme">@style/MyDialog</item>-->
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="HomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <!--&lt;!&ndash;activity 或 dialog从下入场，从上出场动画 &ndash;&gt;-->
+    <!--<style name="activity_animation" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="android:windowEnterAnimation">@anim/slid_from_bottom</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/slid_out_bottom</item>-->
+    <!--</style>-->
+
+
+</resources>

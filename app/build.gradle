@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.codingfeel.boom"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.0.1"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    signingConfigs {
+        debug_config {
+            keyAlias 'debug'
+            keyPassword 'codeboomboom'
+            storeFile file('codeboom_debug.jks')
+            storePassword 'codeboomboom'
+        }
+        releaseConfig {
+            keyAlias 'release'
+            keyPassword 'codeboomboom'
+            storeFile file('codeboom_release.jks')
+            storePassword 'codeboomboom'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            buildConfigField 'String', 'HTTP_SERVER', "\"http://api.codingfeel.com/boom\""
+            buildConfigField 'boolean', 'LOGDEBUG', "true"
+//            buildConfigField 'String', 'H5SERVER', "\"http://h5.codingfeel.com\""
+            buildConfigField 'String', 'H5SERVER', "\"http://h5.codingfeel.com\""
+            buildConfigField 'String', 'BUGLY_APPID', "\"900043815\""
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            buildConfigField 'boolean', 'LOGDEBUG', "true"
+//            buildConfigField 'String', 'HTTP_SERVER', "\"http://api.codingfeel.com/boom\""
+            buildConfigField 'String', 'HTTP_SERVER', "\"http://192.168.199.166:8081/boom\""
+            buildConfigField 'String', 'H5SERVER', "\"http://192.168.199.166:8081/boom\""
+            buildConfigField 'String', 'BUGLY_APPID', "\"900042646\""
+            signingConfig signingConfigs.debug_config
+        }
+    }
+    productFlavors {
+        // A 代表测试环境
+        A {
+            manifestPlaceholders = [
+                    UMENG_APPKEY    : "579a08a5e0f55a28d000245c",
+                    BUILD_VARIANTS  : "debug",
+                    GETUI_APP_ID    : "FhZ9rPqe4o920DuML1xBa4",
+                    GETUI_APP_KEY   : "B9G7mfj81z9PD7xD8NoXU8",
+                    GETUI_APP_SECRET: "HgvssskEZU9OBvWqC3J3Z2",
+                    PACKAGE_NAME    : defaultConfig.applicationId,
+                    GETUI_APPIDNAME:"com.igexin.sdk.action.FhZ9rPqe4o920DuML1xBa4",
+            ]
+        }
+        online {
+            manifestPlaceholders = [
+                    UMENG_APPKEY    : "57a004f367e58e8d0f003af7",
+                    BUILD_VARIANTS  : "online",
+                    GETUI_APP_ID    : "tk7p3WBKze8i1eIU8Mro28",
+                    GETUI_APP_KEY   : "GHKaOkn6Gd7POIlz2ye1q9",
+                    GETUI_APP_SECRET: "UNrnZuxY8E8kuDMbL5oLy1",
+                    PACKAGE_NAME    : defaultConfig.applicationId,
+                    GETUI_APPIDNAME:"com.igexin.sdk.action.tk7p3WBKze8i1eIU8Mro28",
+            ]
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['jniLibs']
+        }
+
+        instrumentTest.setRoot('tests')
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.github.johnpersano:supertoasts:1.3.4@aar'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+    compile 'com.android.support:cardview-v7:24.0.0'
+    compile files('libs/fastjson-1.2.12.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    //    compile 'com.malinskiy:superrecyclerview:1.1.4'
+    compile 'com.qiniu:qiniu-android-sdk:7.2.+'
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.edmodo:cropper:1.0.1'
+    compile files('libs/jsoup-1.9.2.jar')
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/libammsdk.jar')
+    //    compile 'me.drakeet.materialdialog:library:1.3.1'
+    compile 'me.zhanghai.android.materialprogressbar:library:1.1.7'
+    compile project(':bottom-navigation-bar')
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile project(path: ':md-dialog-core')
+    compile 'com.tencent.bugly:crashreport:2.1.5' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+}

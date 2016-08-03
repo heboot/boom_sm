@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y450"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x12"
+    android:paddingLeft="@dimen/x24"
+    android:paddingRight="@dimen/x24"
+    android:paddingTop="@dimen/x12">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/x4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_myfav_item_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y403"
+                android:background="@mipmap/post_img_normal_gray"
+                android:scaleType="fitXY" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/x9">
+
+
+                <com.codingfeel.sm.views.CircleImageView
+                    android:id="@+id/iv_myfav_item_head"
+                    android:layout_width="@dimen/x84"
+                    android:layout_height="@dimen/y84" />
+
+
+                <TextView
+                    android:id="@+id/tv_myfav_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x19"
+                    android:layout_toRightOf="@+id/iv_myfav_item_head"
+                    android:gravity="center|left|center_vertical"
+                    android:text="adafsdg"
+                    android:textColor="@color/home_post_item_text_color" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_myfav_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/y21"
+                android:background="@mipmap/fav_focus" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

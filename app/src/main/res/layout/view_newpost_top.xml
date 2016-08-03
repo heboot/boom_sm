@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyt_newpost_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_newpost_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x32" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinner_newpost_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x32"
+        android:layout_marginRight="@dimen/x32"></android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/tv_newpost_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y403"
+        android:layout_margin="@dimen/x32"
+        android:background="@drawable/bg_newpost_img"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:text="添加封面"
+        android:textSize="@dimen/x38" />
+
+
+    <ImageView
+        android:id="@+id/iv_newpost_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y403"
+        android:layout_margin="@dimen/x32"
+        android:background="@drawable/bg_newpost_img"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+
+
+
+</LinearLayout>

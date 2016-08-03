@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView
+        android:id="@+id/rv_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llyt_comment_bottom"
+        android:background="@color/white"
+        app:layout_empty="@layout/view_empty"></com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/llyt_comment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y92"
+        android:layout_alignParentBottom="true"
+        android:background="@color/comment_bottom_layout_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x42">
+
+
+        <EditText
+            android:id="@+id/et_comment_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@null"
+            android:hint="评论" />
+
+        <com.codingfeel.sm.views.GoogleIconFontTextView
+            android:id="@+id/tv_comment_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="&#xE163;"
+            android:textColor="@color/themeColor_red"
+            android:textSize="@dimen/x55" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

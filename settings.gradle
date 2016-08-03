@@ -1,0 +1,11 @@
+include ':app'
+include ':DaoGenerator'
+include ':bottom-navigation-bar'
+include ':NineOldAndroids'
+include ':md-dialog-commons'
+include ':md-dialog-core'
+
+project(':bottom-navigation-bar').projectDir = new File('Librarys/bottom-navigation-bar')
+project(':NineOldAndroids').projectDir = new File('Librarys/NineOldAndroids')
+project(':md-dialog-commons').projectDir = new File('Librarys/md-dialog-commons')
+project(':md-dialog-core').projectDir = new File('Librarys/md-dialog-core')

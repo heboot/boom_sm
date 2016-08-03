@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">什么不值得买</string>
+
+    <string name="lastpage_tips">没有更多了</string>
+    <string name="wx_account">codeboom</string>
+    <string name="email">codeboom@163.com</string>
+    <string name="copyright">Copyright 2016-2018 \n All rights reserved.</string>
+    <string name="page_title_comment">评论</string>
+    <string name="page_title_detail_info">详情</string>
+    <string name="page_title_new_info">爆料</string>
+    <string name="page_title_new_post">编辑帖子</string>
+    <string name="page_title_login">登录</string>
+    <string name="page_title_crop">裁剪</string>
+    <string name="page_title_detail_post">晒物详情</string>
+    <string name="page_title_html">页面</string>
+    <string name="page_title_my_info">我的爆料</string>
+    <string name="page_title_my_fav">我的收藏</string>
+    <string name="page_title_my_post">我的帖子</string>
+    <string name="page_title_my_nickname">昵称</string>
+    <string name="page_title_message_system">系统消息</string>
+
+    <string name="page_title_feedback">反馈</string>
+    <string name="page_title_setting">设置</string>
+
+    <string name="post_type_ceping">测评</string>
+    <string name="post_type_shaiwu">晒物</string>
+
+    <string name="hint_info_link">商品链接</string>
+    <string name="hint_info_title">优惠信息</string>
+    <string name="hint_info_content">优惠信息</string>
+
+    <!--反馈页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <string name="feedback_title_contact">联系方式</string>
+    <string name="feedback_title_feedbackcontent">宝贵建议</string>
+    <string name="feedback_content_null_tips">说点什么吧</string>
+    <!--反馈页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+    <!--设置页↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓start-->
+    <string name="setting_title_basic">基本设置</string>
+    <string name="setting_item_update">版本更新</string>
+    <string name="setting_item_clean_cache">清除缓存</string>
+    <string name="setting_title_contact">联系我们</string>
+    <string name="setting_item_wx_account">微信公众号</string>
+    <string name="setting_item_sinaweibo">新浪微博</string>
+    <string name="setting_item_email">电子邮件</string>
+    <string name="setting_title_other">其他</string>
+    <string name="setting_item_share_app">分享codeboom应用</string>
+    <string name="setting_item_share_wx_account">分享codeboom微信公众号</string>
+    <string name="setting_item_feedback">意见、建议</string>
+    <string name="setting_item_about">关于开发者</string>
+    <!--设置页↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑end-->
+
+
+</resources>

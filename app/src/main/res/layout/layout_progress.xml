@@ -1,0 +1,7 @@
+<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:indeterminate="false"
+    android:indeterminateTint="@color/themeColor_red"
+    android:indeterminateTintMode="src_atop" />

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/themeColor_red"
+        android:gravity="center|left"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingLeft="@dimen/x46"
+        android:text="消息"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_message_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x9"
+        android:layout_marginRight="@dimen/x9"
+        android:layout_marginTop="@dimen/y11"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y22"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y22"
+            android:paddingLeft="@dimen/x61"
+            android:paddingRight="@dimen/x50">
+
+            <com.codingfeel.sm.views.CircleImageView
+                android:id="@+id/iv_message_system_head"
+                android:layout_width="@dimen/x77"
+                android:layout_height="@dimen/x77"
+                android:src="@mipmap/head_system" />
+
+            <TextView
+                android:id="@+id/tv_message_system_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x36"
+                android:layout_toRightOf="@+id/iv_message_system_head"
+                android:text="系统消息"
+                android:textColor="@color/comment_item_name_text_color"
+                android:textSize="@dimen/comment_item_name_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_message_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/x36"
+                android:text="我累个擦"
+                android:textColor="@color/comment_item_content_text_color"
+                android:textSize="@dimen/comment_item_time_text_size" />
+
+            <TextView
+                android:id="@+id/tv_message_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message_system_name"
+                android:layout_marginLeft="@dimen/x36"
+                android:layout_marginTop="@dimen/y25"
+                android:layout_toRightOf="@+id/iv_message_system_head"
+                android:text="我累个擦"
+                android:textColor="@color/comment_item_content_text_color"
+                android:textSize="@dimen/comment_item_content_text_size" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView
+        android:id="@+id/rv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y5"></com.codingfeel.sm.views.superrecyclerview.SuperRecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/setting_page_padding"
+        android:paddingRight="@dimen/setting_page_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y21"
+            android:text="@string/setting_title_basic"
+            android:textColor="@color/themeColor_red"
+            android:textSize="@dimen/setting_title_text_size" />
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_version_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <LinearLayout
+                android:id="@+id/llyt_setting_version_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/setting_item_update"
+                    android:textColor="@color/setting_item_text_color"
+                    android:textSize="@dimen/setting_item_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_setting_version"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="V0.0.1"
+                    android:textColor="@color/setting_item_cild_text_color"
+                    android:textSize="@dimen/setting_item_child_text_size" />
+
+            </LinearLayout>
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:visibility="gone"
+            android:id="@+id/rply_setting_clean_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <LinearLayout
+                android:id="@+id/llyt_setting_clean_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/setting_item_clean_cache"
+                    android:textColor="@color/setting_item_text_color"
+                    android:textSize="@dimen/setting_item_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="V0.0.1"
+                    android:textColor="@color/setting_item_cild_text_color"
+                    android:textSize="@dimen/setting_item_child_text_size" />
+
+            </LinearLayout>
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/setting_item_margin_top"
+            android:text="@string/setting_title_contact"
+            android:textColor="@color/themeColor_red"
+            android:textSize="@dimen/setting_title_text_size" />
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:visibility="gone"
+            android:id="@+id/rply_setting_contact_weixinamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <LinearLayout
+
+                android:id="@+id/llyt_setting_contact_weixinamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/setting_item_wx_account"
+                    android:textColor="@color/setting_item_text_color"
+                    android:textSize="@dimen/setting_item_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/wx_account"
+                    android:textColor="@color/setting_item_cild_text_color"
+                    android:textSize="@dimen/setting_item_child_text_size" />
+
+            </LinearLayout>
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_contact_weibo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <LinearLayout
+                android:id="@+id/llyt_setting_contact_weibo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/setting_item_sinaweibo"
+                    android:textColor="@color/setting_item_text_color"
+                    android:textSize="@dimen/setting_item_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/wx_account"
+                    android:textColor="@color/setting_item_cild_text_color"
+                    android:textSize="@dimen/setting_item_child_text_size" />
+
+            </LinearLayout>
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_contact_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <LinearLayout
+                android:id="@+id/llyt_setting_contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/setting_item_email"
+                    android:textColor="@color/setting_item_text_color"
+                    android:textSize="@dimen/setting_item_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/email"
+                    android:textColor="@color/setting_item_cild_text_color"
+                    android:textSize="@dimen/setting_item_child_text_size" />
+
+            </LinearLayout>
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y22"
+            android:text="@string/setting_title_other"
+            android:textColor="@color/themeColor_red"
+            android:textSize="@dimen/setting_title_text_size" />
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_share_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/tv_setting_share_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="@string/setting_item_share_app"
+                android:textColor="@color/setting_item_text_color"
+                android:textSize="@dimen/setting_item_text_size" />
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:visibility="gone"
+            android:id="@+id/rply_setting_share_weixinamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/tv_setting_share_weixinamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="@string/setting_item_share_wx_account"
+                android:textColor="@color/setting_item_text_color"
+                android:textSize="@dimen/setting_item_text_size" />
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/tv_setting_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="@string/setting_item_feedback"
+                android:textColor="@color/setting_item_text_color"
+                android:textSize="@dimen/setting_item_text_size" />
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+        <com.codingfeel.sm.views.MaterialRippleLayout
+            android:id="@+id/rply_setting_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_item_padding"
+            android:paddingTop="@dimen/setting_item_padding"
+            app:rippleAdapterClicked="false"
+            app:rippleAlpha="0.2"
+            app:rippleColorMy="@color/setting_ripple_color"
+            app:rippleDelayClick="true"
+            app:rippleHover="true"
+            app:rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/tv_setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="@string/setting_item_about"
+                android:textColor="@color/setting_item_text_color"
+                android:textSize="@dimen/setting_item_text_size" />
+        </com.codingfeel.sm.views.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_line_height"
+            android:background="@color/setting_line_color"></View>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y29"
+            android:layout_marginTop="@dimen/y78"
+            android:gravity="center"
+            android:text="@string/copyright"
+            android:textColor="@color/copyright_text_color"
+            android:textSize="@dimen/copy_right_text_size" />
+    </LinearLayout>
+</ScrollView>

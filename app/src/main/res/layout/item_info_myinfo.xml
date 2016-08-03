@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y240"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y9"
+        android:layout_marginLeft="@dimen/x17"
+        android:layout_marginRight="@dimen/x17"
+        android:layout_marginTop="@dimen/y9"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/x6"
+        app:cardElevation="@dimen/x5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/y21"
+            android:paddingLeft="@dimen/x27"
+            android:paddingRight="@dimen/x27"
+            android:paddingTop="@dimen/y21">
+
+
+            <ImageView
+                android:id="@+id/iv_myinfo_item_img"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/y200"
+                android:background="@mipmap/head_system"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_myinfo_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginTop="@dimen/y3"
+                android:layout_toRightOf="@+id/iv_myinfo_item_img"
+                android:text="test"
+                android:textColor="@color/home_item_title_text_color"
+                android:textSize="@dimen/home_item_title_text_size" />
+
+            <TextView
+                android:id="@+id/tv_myinfo_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_myinfo_item_title"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginTop="@dimen/y24"
+                android:layout_toRightOf="@+id/iv_myinfo_item_img"
+                android:text="211"
+                android:textColor="@color/home_item_price_text_color"
+                android:textSize="@dimen/home_item_price_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_myinfo_item_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginTop="@dimen/y39"
+                android:layout_toRightOf="@+id/iv_myinfo_item_img"
+                android:text="test|test"
+                android:textColor="@color/home_item_info_text_color"
+                android:textSize="@dimen/home_item_info_text_size" />
+
+            <ImageView
+                android:id="@+id/iv_myinfo_item_eva"
+                android:layout_width="@dimen/x29"
+                android:layout_height="@dimen/x29"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/x7"
+                android:layout_toLeftOf="@+id/tv_myinfo_item_good"
+                android:background="@mipmap/comment_gray" />
+
+            <TextView
+                android:id="@+id/tv_myinfo_item_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="211"
+                android:textColor="@color/home_item_good_text_color"
+                android:textSize="@dimen/home_item_good_text_size" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlyt_myinfo_verify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_myinfo__verify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="审核中"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x46" />
+
+            <com.codingfeel.sm.views.GoogleIconFontTextView
+                android:id="@+id/tv_myinfo_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x17"
+                android:layout_marginTop="@dimen/y21"
+                android:text="&#xE92B;"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x52" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
