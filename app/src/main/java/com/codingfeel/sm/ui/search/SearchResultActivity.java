@@ -95,9 +95,9 @@ public class SearchResultActivity extends BaseHideActivity {
                     pageNo = 1;
 
                     if (searchType.equals(ConstantValue.SEARCH_TYPE_INFO)) {
-                        InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, searchKey);
+                        PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, searchKey,ConstantValue.HOME_HOT);
                     } else if (searchType.equals(ConstantValue.SEARCH_TYPE_POST)) {
-                        PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, searchKey);
+                        PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, searchKey,ConstantValue.HOME_HOT);
                     }
 
 

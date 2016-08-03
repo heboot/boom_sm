@@ -31,6 +31,9 @@ public class ConstantValue {
     public static final int VERIFY_STATUS_SUC = 1;
     public static final int VERIFY_STATUS_ERR = 2;
 
+    public static final String HOME_HOT = "1";
+    public static final String HOME_NO_NOT = "0";
+
     /**
      * 消息类型
      */

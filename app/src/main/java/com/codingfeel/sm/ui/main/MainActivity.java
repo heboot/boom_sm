@@ -31,6 +31,7 @@ import com.codingfeel.sm.ui.info.InfoFragment;
 import com.codingfeel.sm.ui.message.MessageFragment;
 import com.codingfeel.sm.ui.my.MyFragment;
 import com.codingfeel.sm.ui.post.PostFragment;
+import com.codingfeel.sm.ui.post.PostHotFragment;
 import com.codingfeel.sm.utils.DownloadUtils;
 import com.codingfeel.sm.utils.PushUtil;
 import com.codingfeel.sm.utils.VerisonUtil;
@@ -53,7 +54,7 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
 
     private FragmentManager fragmentManager;
 
-    private InfoFragment infoFragment;
+    private PostHotFragment postHotFragment;
     private PostFragment postFragment;
     private MessageFragment messageFragment;
     private MyFragment myFragment;
@@ -64,10 +65,10 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
     private List<ImageView> imageViewList = new ArrayList<>();
     private List<Fragment> fragmentList = new ArrayList<>();
 
-    BottomNavigationItem indexItem;
-    BottomNavigationItem postItem;
-    BottomNavigationItem messageItem;
-    BottomNavigationItem myItem;
+    private BottomNavigationItem indexItem;
+    private BottomNavigationItem postItem;
+    private BottomNavigationItem messageItem;
+    private BottomNavigationItem myItem;
     private int color;
     MaterialDialog materialDialog;
 
@@ -124,7 +125,7 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
                     case 0:
                         currentSelectIndex = 0;
                         refreshBottomMenuUI(currentSelectIndex);
-                        showFragment(infoFragment);
+                        showFragment(postHotFragment);
                         break;
                     case 1:
                         currentSelectIndex = 1;
@@ -233,24 +234,24 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        infoFragment = new InfoFragment();
+        postHotFragment = new PostHotFragment();
         postFragment = new PostFragment();
         messageFragment = new MessageFragment();
         myFragment = new MyFragment();
 
-        fragmentList.add(infoFragment);
+        fragmentList.add(postHotFragment);
         fragmentList.add(postFragment);
         fragmentList.add(messageFragment);
         fragmentList.add(myFragment);
 
-        fragmentTransaction.add(R.id.llyt_main_container, infoFragment);
+        fragmentTransaction.add(R.id.llyt_main_container, postHotFragment);
         fragmentTransaction.add(R.id.llyt_main_container, postFragment);
         fragmentTransaction.add(R.id.llyt_main_container, messageFragment);
         fragmentTransaction.add(R.id.llyt_main_container, myFragment);
 
         fragmentTransaction.commit();
 
-        fragmentTransaction.show(infoFragment);
+        fragmentTransaction.show(postHotFragment);
 
     }
 

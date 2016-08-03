@@ -160,16 +160,18 @@ public class PostService extends HttpService {
     }
 
 
-    public void home(int pageSize, int pageNo, final String keywords) {
+    public void home(int pageSize, int pageNo, final String keywords, String isHot) {
         HttpRequest httpRequest = new HttpRequest(BuildConfig.HTTP_SERVER + ACTION_POST_HOME, HttpRequest.Method.GET, true);
         httpRequest.addParams(PARAM_PAGESIZE, String.valueOf(pageSize));
         httpRequest.addParams(PARAM_PAGENO, String.valueOf(pageNo));
         httpRequest.addParams(PARAM_KEYWORDS, keywords);
+        httpRequest.addParams(PARAM_IS_HOT, isHot);
 
         FormBody formBody = new FormBody.Builder()
                 .add(PARAM_KEYWORDS, keywords)
                 .add(PARAM_PAGESIZE, String.valueOf(pageSize))
                 .add(PARAM_PAGENO, String.valueOf(pageNo))
+                .add(PARAM_IS_HOT, isHot)
                 .build();
         httpRequest.setFormBody(formBody);
 

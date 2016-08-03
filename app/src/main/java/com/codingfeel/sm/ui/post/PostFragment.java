@@ -133,7 +133,7 @@ public class PostFragment extends BaseFragment {
 
 
     private void initData() {
-        PostService.getInstance().home(ConstantValue.PAGE_SIZE, ConstantValue.PAGE_NO, keywords);
+        PostService.getInstance().home(ConstantValue.PAGE_SIZE, ConstantValue.PAGE_NO, keywords,ConstantValue.HOME_NO_NOT);
     }
 
     private void initListener() {
@@ -189,7 +189,7 @@ public class PostFragment extends BaseFragment {
             public void onRefresh() {
                 LogUtils.e(TAG, "onRefresh");
                 pageNo = 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
             }
         });
         rvPost.setupMoreListener(new OnMoreListener() {
@@ -202,7 +202,7 @@ public class PostFragment extends BaseFragment {
                     return;
                 }
                 pageNo = pageNo + 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
             }
         }, 1);
         rvPost.setupSwipeToDismiss(new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {

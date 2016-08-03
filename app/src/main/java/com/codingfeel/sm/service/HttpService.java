@@ -77,4 +77,5 @@ public abstract class HttpService {
     String PARAM_LOGINNAME = "loginName";
     String PARAM_MESSAGE_CREATE_TIME = "messageCreateTime";
     String PARAM_MESSAGE_SYSTEM_CREATE_TIME = "systemMessageCreateTime";
+    String PARAM_IS_HOT = "isHot";
 }

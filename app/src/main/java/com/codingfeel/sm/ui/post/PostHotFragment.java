@@ -133,7 +133,7 @@ public class PostHotFragment extends BaseFragment {
 
 
     private void initData() {
-        PostService.getInstance().home(ConstantValue.PAGE_SIZE, ConstantValue.PAGE_NO, keywords);
+        PostService.getInstance().home(ConstantValue.PAGE_SIZE, ConstantValue.PAGE_NO, keywords, ConstantValue.HOME_HOT);
     }
 
     private void initListener() {
@@ -189,7 +189,7 @@ public class PostHotFragment extends BaseFragment {
             public void onRefresh() {
                 LogUtils.e(TAG, "onRefresh");
                 pageNo = 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords, ConstantValue.HOME_HOT);
             }
         });
         rvPost.setupMoreListener(new OnMoreListener() {
@@ -202,7 +202,7 @@ public class PostHotFragment extends BaseFragment {
                     return;
                 }
                 pageNo = pageNo + 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords, ConstantValue.HOME_HOT);
             }
         }, 1);
         rvPost.setupSwipeToDismiss(new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
@@ -249,11 +249,11 @@ public class PostHotFragment extends BaseFragment {
                 List<PostModel> postModels = postHomeBean.getPost();
 
                 if (postHomeAdapter == null) {
-                    postModels.add(0,new PostModel());
+                    postModels.add(0, new PostModel());
                     postHomeAdapter = new PostHomeAdapter2<PostModel>(getActivity(), postModels);
                 } else {
                     if (pageNo == 1) {
-                        postModels.add(0,new PostModel());
+                        postModels.add(0, new PostModel());
                         postHomeAdapter.getList().clear();
                     }
                     postHomeAdapter.getList().addAll(postModels);
