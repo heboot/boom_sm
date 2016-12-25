@@ -47,7 +47,7 @@ android {
             buildConfigField 'boolean', 'LOGDEBUG', "true"
 //            buildConfigField 'String', 'H5SERVER', "\"http://h5.codingfeel.com\""
             buildConfigField 'String', 'H5SERVER', "\"http://h5.codingfeel.com\""
-            buildConfigField 'String', 'BUGLY_APPID', "\"900043815\""
+            buildConfigField 'String', 'BUGLY_APPID', "\"900045012\""
             signingConfig signingConfigs.releaseConfig
         }
         debug {
@@ -58,7 +58,7 @@ android {
 //            buildConfigField 'String', 'HTTP_SERVER', "\"http://api.codingfeel.com/boom\""
             buildConfigField 'String', 'HTTP_SERVER', "\"http://192.168.199.166:8081/sm\""
             buildConfigField 'String', 'H5SERVER', "\"http://192.168.199.166:8081/boom\""
-            buildConfigField 'String', 'BUGLY_APPID', "\"900042646\""
+            buildConfigField 'String', 'BUGLY_APPID', "\"17088ef17d\""
             signingConfig signingConfigs.debug_config
         }
     }
