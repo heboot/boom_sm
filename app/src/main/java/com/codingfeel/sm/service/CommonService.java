@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
 import com.codingfeel.sm.BuildConfig;
 import com.codingfeel.sm.MyApplication;
+import com.codingfeel.sm.api.ApiClient;
 import com.codingfeel.sm.bean.CommonBean;
 import com.codingfeel.sm.bean.CommonGuestBean;
 import com.codingfeel.sm.bean.MessageBean;
@@ -29,6 +30,8 @@ import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.FormBody;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Heboot on 16/7/18.
@@ -68,7 +71,24 @@ public class CommonService extends HttpService {
     }
 
     public void homeGuest(final Context context) {
+
+
+
         HttpRequest httpRequest = new HttpRequest(BuildConfig.HTTP_SERVER + ACTION_COMMON_HOME_GUEST, HttpRequest.Method.GET, true);
+
+        ApiClient.getCommonServiceInterface(null).homeGuest(new Callback<CommonGuestBean>() {
+            @Override
+            public void onResponse(retrofit2.Call<CommonGuestBean> call, Response<CommonGuestBean> response) {
+
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<CommonGuestBean> call, Throwable t) {
+
+            }
+        });
+
+
         HttpUtils.getInstance().execute(httpRequest, new HttpResponse() {
             @Override
             public void onFailure(Call call, IOException e) {

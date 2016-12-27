@@ -3,6 +3,7 @@ package com.codingfeel.sm.http;
 
 import com.codingfeel.sm.BuildConfig;
 import com.codingfeel.sm.MyApplication;
+import com.codingfeel.sm.api.ApiClient;
 import com.codingfeel.sm.model.UserModel;
 import com.codingfeel.sm.service.UserService;
 import com.codingfeel.sm.utils.EncryptUtils;
@@ -26,6 +27,8 @@ import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Heboot on 16/6/24.
@@ -75,12 +78,10 @@ public class HttpUtils {
      *
      * @return
      */
-    public void execute(final HttpRequest httpRequest, final HttpResponse callback) {
+    public void execute(final HttpRequest httpRequest, final HttpResponse callback ) {
         doSignature(httpRequest);
 
-
         initRequest(httpRequest);
-
 
         client.newCall(request).enqueue(new Callback() {
             @Override
