@@ -133,29 +133,17 @@ public class InfoFragment extends BaseFragment {
 
 
     private void initListener() {
-        etInfoSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                IntentUtils.intent2SearchResultActivity(getActivity(), ConstantValue.SEARCH_TYPE_INFO);
+        etInfoSearch.setOnClickListener(event -> IntentUtils.intent2SearchResultActivity(getActivity(), ConstantValue.SEARCH_TYPE_INFO));
+
+        tvAdd.setOnClickListener(event -> {
+            if (!UserService.getInstance().isLogin()) {
+                IntentUtils.intent2LoginActivity(getContext());
+                return;
             }
-        });
-        tvAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!UserService.getInstance().isLogin()) {
-                    IntentUtils.intent2LoginActivity(getContext());
-                    return;
-                }
-                IntentUtils.intent2NewInfoActivity(getActivity());
-            }
-        });
-        llytInfoSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                IntentUtils.intent2SearchResultActivity(getActivity(), ConstantValue.SEARCH_TYPE_INFO);
-            }
+            IntentUtils.intent2NewInfoActivity(getActivity());
         });
 
+        llytInfoSearch.setOnClickListener(event -> IntentUtils.intent2SearchResultActivity(getActivity(), ConstantValue.SEARCH_TYPE_INFO));
     }
 
     private void hideViews() {
@@ -175,26 +163,23 @@ public class InfoFragment extends BaseFragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvInfo.setLayoutManager(layoutManager);
         rvInfo.setRefreshingColorResources(R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red);
-        rvInfo.setRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                LogUtils.e(TAG, "onRefresh");
-                pageNo = 1;
-                InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
-            }
+
+        rvInfo.setRefreshListener(() -> {
+            LogUtils.e(TAG, "onRefresh");
+            pageNo = 1;
+            InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
         });
-        rvInfo.setupMoreListener(new OnMoreListener() {
-            @Override
-            public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
-                if (isLastPage) {
-                    showToast(getResources().getString(R.string.lastpage_tips), SuperToast.Duration.VERY_SHORT);
-                    rvInfo.hideMoreProgress();
-                    return;
-                }
-                pageNo = pageNo + 1;
-                InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+
+        rvInfo.setupMoreListener((a, b, c) -> {
+            if (isLastPage) {
+                showToast(getResources().getString(R.string.lastpage_tips), SuperToast.Duration.VERY_SHORT);
+                rvInfo.hideMoreProgress();
+                return;
             }
+            pageNo = pageNo + 1;
+            InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
         }, 1);
+
         rvInfo.setupSwipeToDismiss(new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
             @Override
             public boolean canDismiss(int position) {
