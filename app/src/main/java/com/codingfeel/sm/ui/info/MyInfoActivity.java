@@ -87,13 +87,10 @@ public class MyInfoActivity extends ToolBarActivity {
 
 
         rvMyinfo.setRefreshingColorResources(R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red);
-        rvMyinfo.setRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                LogUtils.e(TAG, "onRefresh");
-                pageNo = 1;
-                initData();
-            }
+        rvMyinfo.setRefreshListener(() -> {
+            LogUtils.e(TAG, "onRefresh");
+            pageNo = 1;
+            initData();
         });
         rvMyinfo.setupMoreListener(new OnMoreListener() {
             @Override
