@@ -27,6 +27,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.http.GET;
+import rx.Observable;
 
 /**
  * Created by Heboot on 2016/12/27.
@@ -139,7 +140,7 @@ public class ApiClient {
     public interface CommonServiceInterface {
 
         @GET(ACTION_COMMON_HOME)
-        void homeGuest(Callback<CommonGuestBean> callback);
+        Observable<CommonGuestBean> homeGuest();
 
     }
 

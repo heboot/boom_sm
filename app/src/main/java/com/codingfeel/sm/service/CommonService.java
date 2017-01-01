@@ -76,17 +76,7 @@ public class CommonService extends HttpService {
 
         HttpRequest httpRequest = new HttpRequest(BuildConfig.HTTP_SERVER + ACTION_COMMON_HOME_GUEST, HttpRequest.Method.GET, true);
 
-        ApiClient.getCommonServiceInterface(null).homeGuest(new Callback<CommonGuestBean>() {
-            @Override
-            public void onResponse(retrofit2.Call<CommonGuestBean> call, Response<CommonGuestBean> response) {
-
-            }
-
-            @Override
-            public void onFailure(retrofit2.Call<CommonGuestBean> call, Throwable t) {
-
-            }
-        });
+        ApiClient.getCommonServiceInterface(null).homeGuest().sub;
 
 
         HttpUtils.getInstance().execute(httpRequest, new HttpResponse() {
