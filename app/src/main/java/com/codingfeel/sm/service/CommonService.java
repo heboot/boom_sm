@@ -76,7 +76,7 @@ public class CommonService extends HttpService {
 
         HttpRequest httpRequest = new HttpRequest(BuildConfig.HTTP_SERVER + ACTION_COMMON_HOME_GUEST, HttpRequest.Method.GET, true);
 
-        ApiClient.getCommonServiceInterface(null).homeGuest().sub;
+        ApiClient.getCommonServiceInterface(null).homeGuest();
 
 
         HttpUtils.getInstance().execute(httpRequest, new HttpResponse() {
