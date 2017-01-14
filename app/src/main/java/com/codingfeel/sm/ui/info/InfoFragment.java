@@ -170,16 +170,28 @@ public class InfoFragment extends BaseFragment {
             InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
         });
 
-        rvInfo.setupMoreListener((a, b, c) -> {
-            if (isLastPage) {
-                showToast(getResources().getString(R.string.lastpage_tips), SuperToast.Duration.VERY_SHORT);
-                rvInfo.hideMoreProgress();
-                return;
+
+        rvInfo.setupMoreListener(new OnMoreListener() {
+            @Override
+            public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
+
             }
-            pageNo = pageNo + 1;
-            InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
+        },1);
+
+        rvInfo.setupMoreListener((a, b, c) -> {
+
         }, 1);
 
+
+
+
+        if (isLastPage) {
+            showToast(getResources().getString(R.string.lastpage_tips), SuperToast.Duration.VERY_SHORT);
+            rvInfo.hideMoreProgress();
+            return;
+        }
+        pageNo = pageNo + 1;
+        InfoService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords);
         rvInfo.setupSwipeToDismiss(new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
             @Override
             public boolean canDismiss(int position) {

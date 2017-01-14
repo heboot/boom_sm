@@ -43,6 +43,12 @@ public class ApiRequest   {
         isGuide = guide;
     }
 
+    public ApiRequest(String httpUrl, int method, boolean isGuide) {
+        this.httpUrl = httpUrl;
+        this.method = method;
+        this.isGuide = isGuide;
+    }
+
     public String matchMethod(int method) {
         String methodString = "GET";
         switch (method) {

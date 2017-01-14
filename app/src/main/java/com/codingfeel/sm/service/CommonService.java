@@ -7,6 +7,7 @@ import com.alibaba.fastjson.JSON;
 import com.codingfeel.sm.BuildConfig;
 import com.codingfeel.sm.MyApplication;
 import com.codingfeel.sm.api.ApiClient;
+import com.codingfeel.sm.api.ApiRequest;
 import com.codingfeel.sm.bean.CommonBean;
 import com.codingfeel.sm.bean.CommonGuestBean;
 import com.codingfeel.sm.bean.MessageBean;
@@ -32,6 +33,8 @@ import okhttp3.Call;
 import okhttp3.FormBody;
 import retrofit2.Callback;
 import retrofit2.Response;
+import rx.Observable;
+import rx.functions.Action1;
 
 /**
  * Created by Heboot on 16/7/18.
@@ -70,15 +73,13 @@ public class CommonService extends HttpService {
         });
     }
 
+    public Observable<CommonGuestBean> homeGuest() {
+        ApiRequest apiRequest = new ApiRequest(BuildConfig.HTTP_SERVER + ACTION_COMMON_HOME_GUEST, HttpRequest.Method.GET, true);
+        return ApiClient.getCommonServiceInterface(apiRequest).homeGuest();
+    }
+
     public void homeGuest(final Context context) {
-
-
-
         HttpRequest httpRequest = new HttpRequest(BuildConfig.HTTP_SERVER + ACTION_COMMON_HOME_GUEST, HttpRequest.Method.GET, true);
-
-        ApiClient.getCommonServiceInterface(null).homeGuest();
-
-
         HttpUtils.getInstance().execute(httpRequest, new HttpResponse() {
             @Override
             public void onFailure(Call call, IOException e) {

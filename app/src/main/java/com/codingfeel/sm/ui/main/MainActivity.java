@@ -21,6 +21,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.codingfeel.sm.R;
+import com.codingfeel.sm.bean.CommonGuestBean;
 import com.codingfeel.sm.event.MessageEvent;
 import com.codingfeel.sm.event.SystemEvent;
 import com.codingfeel.sm.event.UIEvent;
@@ -44,6 +45,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import rx.functions.Action0;
+import rx.functions.Action1;
 
 public class MainActivity extends BaseHideActivity implements View.OnClickListener {
 
@@ -79,7 +82,18 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
         PushUtil.initPush(this);
         color = getResources().getColor(R.color.themeColor_red);
         UserService.getInstance().autoLogin(this);
-        CommonService.getInstance().homeGuest(this);
+//        CommonService.getInstance().homeGuest(this);
+
+        CommonService.getInstance().homeGuest().subscribe(
+                onCall -> {
+
+                },
+                onError -> {
+
+                },
+                () -> {
+
+                });
 
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
