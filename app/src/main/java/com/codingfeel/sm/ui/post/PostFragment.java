@@ -76,7 +76,7 @@ public class PostFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         EventBus.getDefault().register(this);
         initRecyclerView();
-        initData();
+//        initData();
         initListener();
         initAnimation();
         return view;
@@ -184,27 +184,27 @@ public class PostFragment extends BaseFragment {
 
 
         rvPost.setRefreshingColorResources(R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red, R.color.themeColor_red);
-        rvPost.setRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                LogUtils.e(TAG, "onRefresh");
-                pageNo = 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
-            }
-        });
-        rvPost.setupMoreListener(new OnMoreListener() {
-            @Override
-            public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
-//                showToast("onMoreAsked",SuperToast.Duration.VERY_SHORT);
-                LogUtils.e(TAG, itemsBeforeMore + "onMoreAsked" + overallItemsCount + "====" + maxLastVisiblePosition);
-                if (isLastPage) {
-                    rvPost.hideMoreProgress();
-                    return;
-                }
-                pageNo = pageNo + 1;
-                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
-            }
-        }, 1);
+//        rvPost.setRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                LogUtils.e(TAG, "onRefresh");
+//                pageNo = 1;
+//                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
+//            }
+//        });
+//        rvPost.setupMoreListener(new OnMoreListener() {
+//            @Override
+//            public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
+////                showToast("onMoreAsked",SuperToast.Duration.VERY_SHORT);
+//                LogUtils.e(TAG, itemsBeforeMore + "onMoreAsked" + overallItemsCount + "====" + maxLastVisiblePosition);
+//                if (isLastPage) {
+//                    rvPost.hideMoreProgress();
+//                    return;
+//                }
+//                pageNo = pageNo + 1;
+//                PostService.getInstance().home(ConstantValue.PAGE_SIZE, pageNo, keywords,ConstantValue.HOME_NO_NOT);
+//            }
+//        }, 1);
         rvPost.setupSwipeToDismiss(new SwipeDismissRecyclerViewTouchListener.DismissCallbacks() {
             @Override
             public boolean canDismiss(int position) {

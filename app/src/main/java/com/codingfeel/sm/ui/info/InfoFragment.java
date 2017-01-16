@@ -83,7 +83,7 @@ public class InfoFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         EventBus.getDefault().register(this);
         initRecyclerView();
-        initData();
+//        initData();
         initListener();
         initAnimation();
         return view;

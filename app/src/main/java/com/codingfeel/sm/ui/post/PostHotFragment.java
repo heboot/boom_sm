@@ -76,8 +76,8 @@ public class PostHotFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         EventBus.getDefault().register(this);
         initRecyclerView();
-        initData();
-        initListener();
+//        initData();
+//        initListener();
         initAnimation();
         return view;
     }

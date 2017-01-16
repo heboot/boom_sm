@@ -34,6 +34,7 @@ import com.codingfeel.sm.ui.my.MyFragment;
 import com.codingfeel.sm.ui.post.PostFragment;
 import com.codingfeel.sm.ui.post.PostHotFragment;
 import com.codingfeel.sm.utils.DownloadUtils;
+import com.codingfeel.sm.utils.LogUtils;
 import com.codingfeel.sm.utils.PushUtil;
 import com.codingfeel.sm.utils.VerisonUtil;
 
@@ -45,8 +46,11 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
+import rx.schedulers.Schedulers;
 
 public class MainActivity extends BaseHideActivity implements View.OnClickListener {
 
@@ -81,19 +85,20 @@ public class MainActivity extends BaseHideActivity implements View.OnClickListen
         setContentView(R.layout.activity_main);
         PushUtil.initPush(this);
         color = getResources().getColor(R.color.themeColor_red);
-        UserService.getInstance().autoLogin(this);
+//        UserService.getInstance().autoLogin(this);
 //        CommonService.getInstance().homeGuest(this);
 
-        CommonService.getInstance().homeGuest().subscribe(
-                onCall -> {
-
-                },
-                onError -> {
-
-                },
-                () -> {
-
-                });
+        CommonService.getInstance().homeGuest().observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.newThread())
+                .subscribe(
+                        onCall -> {
+                            LogUtils.e(TAG, "ON CALL");
+                        },
+                        (e) -> {
+                            LogUtils.e(TAG, "ON CALL2" + e);
+                        },
+                        () -> {
+                            LogUtils.e(TAG, "ON CALL3");
+                        });
 
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);

@@ -24,10 +24,14 @@ import java.util.Map;
 
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
+import retrofit2.CallAdapter;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import rx.Observable;
+import rx.plugins.RxJavaPlugins;
 
 /**
  * Created by Heboot on 2016/12/27.
@@ -127,10 +131,13 @@ public class ApiClient {
 
     public static CommonServiceInterface getCommonServiceInterface(ApiRequest request) {
         doSignature(request);
+        LogUtils.e("tag","ON CALL6" + request.getHttpUrl());
         if (commonServiceInterface == null) {
             Retrofit retrofit = new Retrofit.Builder().
-                    baseUrl(BuildConfig.HTTP_SERVER)
+                    baseUrl(request.getHttpUrl())
                     .client(client)
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build();
             return retrofit.create(CommonServiceInterface.class);
         }

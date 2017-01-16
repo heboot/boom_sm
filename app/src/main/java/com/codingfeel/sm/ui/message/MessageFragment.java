@@ -67,8 +67,8 @@ public class MessageFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         EventBus.getDefault().register(this);
         initRecyclerView();
-        initSystemMessage(null);
-        initMessageList();
+//        initSystemMessage(null);
+//        initMessageList();
         initListener();
         return view;
     }
